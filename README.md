@@ -1,4 +1,4 @@
-## Fire Detection
+# Fire Detection
 
 **Author:** [Pedro Vinícius A. B. Venâncio](https://www.linkedin.com/in/pedbrgs/)<sup>1</sup> <br />
 
@@ -6,16 +6,22 @@
 
 ***
 
-### About
+## About
 
-This repository will contain the source codes of some fire detection systems implemented in Python.
+This repository will contain the source codes of some fire detection systems implemented during my master's degree.
 
-### Models
+## Models
 
 - [Baseline fire classification networks.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
 - [Proposed fire detection networks.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
 
 
-### Dataset
+## Dataset
 
-- [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
+- [D-Fire: an image data set for fire and smoke detection.](https://github.com/gaiasd/DFireDataset)
+
+## Citation
+
+Please cite the following paper if you use our YOLOv4 models:
+
+- <p align="justify"><b>Pedro Vinícius Almeida Borges de Venâncio</b>, Adriano Chaves Lisboa, Adriano Vilela Barbosa: <a href="https://link.springer.com/article/10.1007/s00521-022-07467-z"> An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices. </a> In: Neural Computing and Applications, 2022.</p>
