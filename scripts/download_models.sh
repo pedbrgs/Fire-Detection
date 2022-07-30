@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 
 # YOLOv4
 wget --no-check-certificate --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=16Eq8WiSGeUUWC-C_zlS3ZY8XM4d_S0yr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=16Eq8WiSGeUUWC-C_zlS3ZY8XM4d_S0yr" -O yolov4.weights && rm -rf /tmp/cookies.txt
