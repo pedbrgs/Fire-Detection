@@ -50,15 +50,10 @@ where `<video_file>` is the video in which you will detect fire and `<model_name
 
 ## Models
 
+Download the model weights from the root of this repository by running the `download_models.sh` script or manually using the links below.
+
 - [Baseline models.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
 - [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
-
-
-## Datasets
-
-- [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
-- [FireNet dataset.](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing)
-- [Foggia's dataset.](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/)
 
 ## Citation
 
@@ -72,8 +67,11 @@ Please cite the following paper if you use FireNet for fire and smoke classifica
 Please cite the following paper if you use MobileNet for fire classification:
 - <p align="justify">Debajyoti Mukhopadhyay, Ramya Iyer, Sagarika Kadam, Rakshanda Koli: <a href="https://ieeexplore.ieee.org/document/8978439"> FPGA Deployable Fire Detection Model for Real-Time Video Surveillance Systems Using Convolutional Neural Networks. </a> In: IEEE Global Conference for Advancement in Technology (GCAT), 2019, Bangalore, India.</p>
 
-## Acknowledgements
+## References
 
+- [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
+- [FireNet dataset.](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing)
+- [Foggia's dataset.](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/)
 - [YOLOv4 with Darknet](https://github.com/AlexeyAB/darknet)
 - [YOLOv5 with PyTorch](https://github.com/ultralytics/yolov5)
 - [Simple object tracking with OpenCV](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/)
