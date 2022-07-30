@@ -8,17 +8,19 @@
 
 ## About
 
-This repository will contain the source codes of some fire detection systems implemented during my master's degree.
+<p align="justify"> This repository contains the models and source codes of some fire detection systems implemented during my master's degree, as well as some baseline models for comparison purposes. The proposed models are convolutional neural networks for fire detection (classification and location) and the baseline models are convolutional neural networks for fire classification. </p>
 
 ## Models
 
-- [Baseline fire classification networks.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
-- [Proposed fire detection networks.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
+- [Baseline models.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
+- [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
 
 
 ## Dataset
 
-- [D-Fire: an image data set for fire and smoke detection.](https://github.com/gaiasd/DFireDataset)
+- [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
+- [FireNet dataset.](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing)
+- [Foggia's dataset.](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/).
 
 ## Citation
 
@@ -28,6 +30,8 @@ Please cite the following paper if you use the proposed YOLOv4 models for fire a
 
 ## Acknowledgements
 
+- [FireNet lightweight network for fire detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection)
+- [Inferno fire detection using CNNs](https://github.com/bubblebeam/Inferno-Realtime-Fire-detection-using-CNNs)
 - [YOLOv4 with Darknet](https://github.com/AlexeyAB/darknet)
 - [YOLOv5 with PyTorch](https://github.com/ultralytics/yolov5)
 - [Simple object tracking with OpenCV](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/)
