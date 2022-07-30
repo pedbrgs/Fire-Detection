@@ -14,6 +14,8 @@
 
 <p align="justify"> The first stage of the hybrid system is a YOLOv5 network (small or large) and the second stage can be a area variation technique (AVT) or a temporal persistence technique (TPT). We recommend AVT for outdoor scenes and TPT for indoor scenes. </p>
 
+After running the system, the videos with the detections are saved in `runs/detect/exp/`.
+
 ### YOLOv5+AVT
 
 If you want to use the hybrid system YOLOv5+AVT, run the following command:
