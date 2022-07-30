@@ -50,7 +50,7 @@ where `<video_file>` is the video in which you will detect fire and `<model_name
 
 ## Models
 
-Download the model weights from the root of this repository by running the `download_models.sh` script or manually using the links below.
+Download the model weights from the root of this repository by running the `./scripts/download_models.sh` script or manually using the links below.
 
 - [Baseline models.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
 - [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
