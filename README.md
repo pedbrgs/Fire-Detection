@@ -54,7 +54,7 @@ where `<video_file>` is the video in which you will detect fire and `<model_name
 - [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
 
 
-## Dataset
+## Datasets
 
 - [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
 - [FireNet dataset.](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing)
@@ -74,8 +74,8 @@ Please cite the following paper if you use MobileNet for fire classification:
 
 ## Acknowledgements
 
-- [FireNet lightweight network for fire detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection)
-- [Inferno fire detection using CNNs](https://github.com/bubblebeam/Inferno-Realtime-Fire-detection-using-CNNs)
 - [YOLOv4 with Darknet](https://github.com/AlexeyAB/darknet)
 - [YOLOv5 with PyTorch](https://github.com/ultralytics/yolov5)
 - [Simple object tracking with OpenCV](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/)
+- [Inferno fire detection using CNNs](https://github.com/bubblebeam/Inferno-Realtime-Fire-detection-using-CNNs)
+- [FireNet lightweight network for fire detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection)
