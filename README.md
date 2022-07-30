@@ -8,7 +8,35 @@
 
 ## About
 
-<p align="justify"> This repository contains the models and source codes of some fire detection systems implemented during my master's degree, as well as some baseline models for comparison purposes. The proposed models are convolutional neural networks for fire detection (classification and location) and the baseline models are convolutional neural networks for fire classification. </p>
+<p align="justify"> This repository contains the models and source codes of hybrid systems for fire detection implemented during my master's degree, as well as some baseline models for comparison purposes. The proposed hybrid systems are composed of two sequential stages: (i) spatial detection (classification and location), which consists of identifying and locating fire and smoke events on the scene based on spatial patterns of the input video stream, and (ii) temporal analysis of the events detected in the previous stage, in order to make a final decision on whether a fire is actually taking place. The baseline models are simple convolutional neural networks for fire classification. </p>
+
+## How to run the proposed hybrid systems
+
+<p align="justify"> The first stage of the hybrid system is a YOLOv5 network (small or large) and the second stage can be a area variation technique (AVT) and a temporal persistence technique (TPT). We recommend AVT for dynamic scenes and TPT for static scenes. </p>
+
+### YOLOv5+AVT
+
+If you want to use the hybrid system YOLOv5+AVT, run the following command:
+
+`python detect.py --source <video_file> --weights <weights_file> --temporal tracker`
+
+where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the area variation technique by specifying the additional flags `--area-thresh` and `window-size`.
+
+### YOLOv5+TPT
+
+If you want to use the hybrid system YOLOv5+TPT, run the following command:
+
+`python detect.py --source <video_file> --weights <weights_file> --temporal persistence`
+
+where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the persistence temporal technique by specifying the additional flags `--persistence-thresh` and `window-size`.
+
+### YOLOv5
+
+If you want to use only the YOLOv5 network, run the following command:
+
+`python detect.py --source <video_file> --imgsz 640 --weights <weights_file>`
+
+where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the YOLOv5 network by specifying the additional flags `--img-size`, `--conf-thres` and `--iou-thres`.
 
 ## Models
 
