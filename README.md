@@ -55,6 +55,12 @@ Download the model weights from the root of this repository by running the `./sc
 - [Baseline models.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
 - [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
 
+## Dependencies
+
+To install the dependencies, run the following command:
+
+`pip install -r requirements.txt`
+
 ## Citation
 
 Please cite the following paper if you use the proposed YOLOv4 models for fire and smoke detection:
