@@ -1,10 +1,10 @@
 import os
 import cv2
 import time
+from tensorflow import keras
 import argparse
 import numpy as np
 import pandas as pd
-from tensorflow import keras
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
@@ -23,7 +23,7 @@ Systems Using Convolutional Neural Networks. In 2019 Global Conference for
 Advancement in Technology (GCAT) (pp. 1-7). IEEE.
 """
 
-def run_baseline(model_path, video_path, model_name):
+def run_baseline(model_name, video_path):
 
     classes = ['fire', 'non_fire']
     detected = False
@@ -35,7 +35,7 @@ def run_baseline(model_path, video_path, model_name):
         img_size = 224
 
     # Loading the trained fire classification model
-    model = load_model(model_path)
+    model = load_model(model_name+'.h5')
     cap = cv2.VideoCapture(video_path)
     time.sleep(2)
     # try to get the first frame
@@ -93,32 +93,22 @@ def run_baseline(model_path, video_path, model_name):
     cv2.destroyAllWindows()
 
     output = pd.DataFrame({'video': [video],
-                           'technique': [model_name],
-                           'threshold': [np.nan],
-                           'window_size': [np.nan],
+                           'network': [model_name],
                            'detected': [detected],
                            'first_frame': [first_frame],
-                           'fps_avg': [np.mean(time_list)]})
+                           'time_avg': [np.mean(time_list)]})
 
     return output
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', type = str, help = 'network weights')
-    parser.add_argument('--videos', type = str, help = 'folder containing the videos')
+    parser.add_argument('--video', type = str, help = 'video')
     parser.add_argument('--model', type = str, help = 'model name (e.g., mobilenet, firenet)')
     params = parser.parse_args()
-    
-    # Get videos
-    videos = os.listdir(params.videos)
-    results = pd.DataFrame()
 
-    # Run inference for each video
-    for video in videos:
-        row = run_baseline(model_path = params.weights,
-                           video_path = params.videos + video,
-                           model_name = params.model)
-        results = pd.concat([results, row], axis = 0)
-    database = 'dfire.csv' if 'dfire' in params.videos.lower() else 'firenet.csv'
-    results.to_csv('./comparison/' + params.model + 'work_' + database, index = False)
+    # Run inference
+    result = run_baseline(model_name = params.model,
+                          video_path = params.video)
+    print("Results")
+    print(result)

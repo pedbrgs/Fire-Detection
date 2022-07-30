@@ -146,7 +146,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
 
     nframes = 1
     detected = False
-    fps_list = list()
+    time_list = list()
     first_frame = None
 
     # Run inference
@@ -281,7 +281,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                 first_frame = nframes
                 detected = True
             # Print time (inference-only)
-            fps_list.append(t3 - t2)
+            time_list.append(t3 - t2)
             LOGGER.info(f'{s}Done. ({t3 - t2:.3f}s)')
             nframes += 1
             print(nframes)
@@ -320,9 +320,10 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
     if update:
         strip_optimizer(weights)  # update model (to fix SourceChangeWarning)
 
-    results = pd.DataFrame(columns = ['video', 'technique', 'threshold', 'window_size', 'detected', 'first_frame', 'fps_avg'])
-    results.loc[0] = [video_name, temporal, threshold, window_size, detected, first_frame, np.mean(fps_list)]
-    results.to_csv(output_name, mode = 'a', index = False, header = False)
+    results = pd.DataFrame(columns = ['video', 'technique', 'threshold', 'window_size', 'detected', 'first_frame', 'time_avg'])
+    results.loc[0] = [video_name, temporal, threshold, window_size, detected, first_frame, np.mean(time_list)]
+    print("Results")
+    print(results)
 
 def parse_opt():
     parser = argparse.ArgumentParser()
