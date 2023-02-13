@@ -63,27 +63,16 @@ To install the dependencies, run the following command:
 
 ## Citation
 
-Please cite the following paper if you use the proposed hybrid systems for fire and smoke detection:
+Please cite the following paper if you use our proposed hybrid systems for fire and smoke detection:
 
 - <p align="justify"><b>Pedro Vinícius Almeida Borges de Venâncio</b>, Roger Júnio Campos, Tamires Martins Rezende, Adriano Chaves Lisboa, Adriano Vilela Barbosa: <a href="https://link.springer.com/article/10.1007/s00521-023-08260-2"> A hybrid method for fire detection based on spatial and temporal patterns. </a> In: Neural Computing and Applications, 2023.</p>
 
-Please cite the following paper if you use the proposed YOLOv4 models for fire and smoke detection:
+If you use our YOLOv4 models for fire and smoke detection, please cite the following paper:
 
 - <p align="justify"><b>Pedro Vinícius Almeida Borges de Venâncio</b>, Adriano Chaves Lisboa, Adriano Vilela Barbosa: <a href="https://link.springer.com/article/10.1007/s00521-022-07467-z"> An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices. </a> In: Neural Computing and Applications, 2022.</p>
 
-Please cite the following paper if you use FireNet for fire and smoke classification:
-- <p align="justify">Arpit Jadon, Mohd. Omama, Akshay Varshney, Mohammad Samar Ansari, Rishabh Sharma: <a href="https://arxiv.org/abs/1905.11922"> FireNet: A Specialized Lightweight Fire & Smoke Detection Model for Real-Time IoT Applications. </a> In: arXiv, 2019.</p>
-
-Please cite the following paper if you use MobileNet for fire classification:
-- <p align="justify">Debajyoti Mukhopadhyay, Ramya Iyer, Sagarika Kadam, Rakshanda Koli: <a href="https://ieeexplore.ieee.org/document/8978439"> FPGA Deployable Fire Detection Model for Real-Time Video Surveillance Systems Using Convolutional Neural Networks. </a> In: IEEE Global Conference for Advancement in Technology (GCAT), 2019, Bangalore, India.</p>
-
 ## References
 
-- [D-Fire dataset.](https://github.com/gaiasd/DFireDataset)
-- [FireNet dataset.](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing)
-- [Foggia's dataset.](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/)
-- [YOLOv4 with Darknet.](https://github.com/AlexeyAB/darknet)
-- [YOLOv5 with PyTorch.](https://github.com/ultralytics/yolov5)
-- [Simple object tracking with OpenCV.](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/)
-- [Inferno fire detection using CNNs.](https://github.com/bubblebeam/Inferno-Realtime-Fire-detection-using-CNNs)
-- [FireNet lightweight network for fire detection.](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection)
+- Algorithms: [YOLOv4 with Darknet](https://github.com/AlexeyAB/darknet), [YOLOv5 with PyTorch](https://github.com/ultralytics/yolov5), and [Object tracking with OpenCV](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/).
+- Baseline models: [Inferno fire detection using CNNs](https://github.com/bubblebeam/Inferno-Realtime-Fire-detection-using-CNNs), and [FireNet lightweight network for fire detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection).
+- Datasets: [D-Fire dataset](https://github.com/gaiasd/DFireDataset), [FireNet dataset](https://drive.google.com/drive/folders/1HznoBFEd6yjaLFlSmkUGARwCUzzG4whq?usp=sharing), and [Foggia's dataset](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/).
