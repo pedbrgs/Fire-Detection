@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 # Download trained models
 RUN mkdir ./weights/
+RUN chmod +x ./scripts/download_models.sh
 RUN ./scripts/download_models.sh
 RUN mv yolov5l.pt ./weights/
 RUN mv yolov5s.pt ./weights/
