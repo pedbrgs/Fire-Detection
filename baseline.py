@@ -35,7 +35,7 @@ def run_baseline(model_name, video_path):
         img_size = 224
 
     # Loading the trained fire classification model
-    model = load_model(model_name+'.h5')
+    model = load_model(f"./weights/{model_name}.h5")
     cap = cv2.VideoCapture(video_path)
     time.sleep(2)
     # try to get the first frame
