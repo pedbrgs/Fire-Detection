@@ -1,4 +1,4 @@
-# :fire: Fire Detection
+## :fire: Fire Detection
 
 **Author:** [Pedro Vinícius A. B. Venâncio](https://www.linkedin.com/in/pedbrgs/)<sup>1</sup> <br />
 
@@ -6,7 +6,7 @@
 
 ***
 
-# :book: About
+## :book: About
 
 <p align="justify"> This repository contains source code and models developed during my master's research on hybrid fire and smoke detection systems, along with baseline models for comparison.
 
@@ -18,9 +18,9 @@ The proposed hybrid systems are composed of two sequential stages:
 Baseline models are standard convolutional neural networks (CNNs) proposed in the literature for fire classification.
 </p>
 
-# :high_brightness: Quickstart
+## :high_brightness: Quickstart
 
-## :open_file_folder: 1. Prepare your environment
+### :open_file_folder: 1. Prepare your environment
 
 1. Clone the repository and place your input videos in the `examples/` folder. 
 
@@ -34,11 +34,11 @@ docker build -t fire-detection .
 docker run -it --rm fire-detection /bin/bash
 ```
 
-## :snowflake: 2. Choose a fire detection system
+### :snowflake: 2. Choose a fire detection system
 
 Select one of the detection methods below and follow its respective instructions.
 
-### :wrench: Detection using a hybrid system
+#### :wrench: Detection using a hybrid system
 
 The hybrid detection system combines two stages:
 
@@ -49,7 +49,7 @@ The hybrid detection system combines two stages:
 
 Detections are saved to `runs/detect/exp/`.
 
-#### :orange_circle: YOLOv5+AVT
+##### :orange_circle: YOLOv5+AVT
 
 If you want to use the hybrid system YOLOv5+AVT, run the following command inside the container:
 ```bash
@@ -58,7 +58,7 @@ python detect.py --source <video_file> --weights ./weights/<weights_file> --temp
 
 where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the area variation technique by specifying the additional flags `--area-thresh` and `window-size`.
 
-#### :red_circle: YOLOv5+TPT
+##### :red_circle: YOLOv5+TPT
 
 If you want to use the hybrid system YOLOv5+TPT, run the following command inside the container:
 ```bash
@@ -67,7 +67,7 @@ python detect.py --source <video_file> --weights ./weights/<weights_file> --temp
 
 where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the persistence temporal technique by specifying the additional flags `--persistence-thresh` and `window-size`.
 
-### :wrench: Detection using YOLOv5 only
+#### :wrench: Detection using YOLOv5 only
 
 To run only the YOLOv5 network without temporal analysis, use:
 ```bash
@@ -76,7 +76,7 @@ python detect.py --source <video_file> --imgsz 640 --weights ./weights/<weights_
 
 where `<video_file>` is the video in which you will detect fire and `<weights_file>` is the file with the network weights (can be [yolov5s.pt](https://drive.google.com/file/d/18kwwGYs0CPVvrLwz283v8IXSeTrTE-Um/view?usp=sharing) or [yolov5l.pt](https://drive.google.com/file/d/14Qhxvruf3cVxZE_e_6tJNCA3w1xzaWQS/view?usp=sharing)). You can change the parameters of the YOLOv5 network by specifying the additional flags `--img-size`, `--conf-thres` and `--iou-thres`.
 
-### :wrench: Detection using baseline models
+#### :wrench: Detection using baseline models
 
 If you want to use a baseline model, run the following command inside the container:
 ```bash
@@ -85,7 +85,7 @@ python baseline.py --video <video_file> --model <model_name>
 
 where `<video_file>` is the video in which you will detect fire and `<model_name>` is the name of the model to be used (can be `'firenet'` or `'mobilenet'`).
 
-# :floppy_disk: Model weights
+## :floppy_disk: Model weights
 
 Run the script to fetch all model weights:
 
@@ -98,7 +98,7 @@ Or download manually:
 - [Baseline models.](https://drive.google.com/drive/folders/1jgZBi2DrfRcRKCZ9ZNdH13uHe8ckWCUJ?usp=sharing)
 - [Proposed models.](https://drive.google.com/drive/folders/1s3sfGdH6ViCD1vVMgif1KQni5vUeFacT?usp=sharing)
 
-# :scroll: Citation
+## :scroll: Citation
 
 Please cite the following paper if you use our proposed hybrid systems for fire and smoke detection:
 
@@ -108,7 +108,7 @@ If you use our YOLOv4 models for fire and smoke detection, please cite the follo
 
 - <p align="justify"><b>Pedro Vinícius Almeida Borges de Venâncio</b>, Adriano Chaves Lisboa, Adriano Vilela Barbosa: <a href="https://link.springer.com/article/10.1007/s00521-022-07467-z"> An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices. </a> In: Neural Computing and Applications, 2022.</p>
 
-# :books: References
+## :books: References
 
 - YOLO models: [YOLOv4 (Darknet)](https://github.com/AlexeyAB/darknet), [YOLOv5 (PyTorch)](https://github.com/ultralytics/yolov5)
 - Object tracking: [OpenCV Tracker (PyImageSearch)](https://pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/).
